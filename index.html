@@ -276,11 +276,18 @@
             border-bottom: none;
             margin-bottom: 0;
         }
+        /* Alternative: Bullet points using CSS */
+        .news-content.with-bullet {
+            position: relative;
+            padding-left: 20px;
+        }
 
-        .news-content {
-            color: #2c3e50;
-            font-size: 1rem;
-            line-height: 1.6;
+        .news-content.with-bullet::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         .btn {
@@ -598,6 +605,7 @@
                 font-size: 1rem;
                 line-height: 1.6;
                 color: #2c3e50;
+                margin-bottom: 0.75rem;
             }
             a {
                 color: #572b2b; /* match sidebar nav text */
@@ -664,15 +672,7 @@
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
-                </div>
-                <div class="contact-info">
                     <hr class="contact-separator">
-                    <div class="contact-item">
-                        <span>alhasacademy@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>London, UK</span>
-                    </div>
                 </div>
                 <nav>
                     <ul class="nav-menu">
@@ -755,7 +755,7 @@
                                 What started out as a side project turned into an entrepreneurial endeavour!
                                 <strong>ItLivesInTheWoods</strong>
                                 is a first-person psychological horror set in the forests of Canada.
-            You are Ibrahim, a father who has recently lost his daughter whilst on a hiking trip in the forest last winter. You hope to find out what happened to your daughter and whether you can reunite with her.
+                                You are Ibrahim, a father who has recently lost his daughter whilst on a hiking trip in the forest last winter. You hope to find out what happened to your daughter and whether you can reunite with her.
                             </p>
                             <p>
                                 View the game on Steam
@@ -766,7 +766,7 @@
                     </div>
                     <h2>Future Projects</h2>
                     <h3>"ItLivesInTheWoods Pt.2" (Computer Game)</h3>
-                    <p>The next installment to my original indie game. Will likely commence development in late 2026.</p>
+                    <p>The next instalment to my original indie game. Will likely commence development in late 2026.</p>
                 </section>
                 <!-- CV Section -->
                 <section id="cv" class="section">
@@ -822,7 +822,7 @@
                 </section>
                 <!-- News Section -->
                 <section id="news" class="section">
-                    <h1>News</h1>
+                    <h1>So, what's been happening?</h1>
                     <div class="news-item">
                         <div class="news-header">
                             <div class="news-date">June 2025</div>
@@ -855,8 +855,11 @@
                             <div class="news-date">August 2022</div>
                             <div class="news-line"></div>
                         </div>
-                        <div class="news-content">
+                        <div class="news-content with-bullet">
                             Graduated with a Master's degree in Artificial Intelligence from King's College London (KCL).
+                        </div>
+                        <div class="news-content with-bullet">
+                            Game development project "ItLivesInTheWoods" started as a side project, later to be a Steam commercial release.
                         </div>
                     </div>
                     <div class="news-item">
