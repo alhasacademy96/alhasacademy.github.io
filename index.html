@@ -609,6 +609,23 @@
                 color: #ffffff; /* brighter or lighter tone for hover */
                 text-decoration: underline;
             }
+            .icon-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                text-decoration: none;
+                transition: background 0.3s ease;
+                color: #bdc3c7;
+                background: transparent;
+            }
+
+            .icon-link:hover {
+                background: rgba(255, 255, 255, 0.1); /* light transparent white background */
+                color: white;
+            }
         </style>
     </head>
     <body>
@@ -621,6 +638,32 @@
                     </div>
                     <div class="profile-name">Ibrahim Alhas</div>
                     <div class="profile-title">Software Engineer</div>
+                    <div class="contact-item" style="justify-content: center; gap: 0.5rem;">
+                        <a
+                            href="https://www.linkedin.com/in/alhasacademy/"
+                            target="_blank"
+                            class="icon-link"
+                            title="LinkedIn"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://store.steampowered.com/curator/41655061"
+                            target="_blank"
+                            class="icon-link"
+                            title="Steam"
+                        >
+                            <i class="fab fa-steam"></i>
+                        </a>
+                        <a
+                            href="https://github.com/alhasacademy96"
+                            target="_blank"
+                            class="icon-link"
+                            title="Steam"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="contact-info">
                     <hr class="contact-separator">
