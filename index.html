@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ibrahim Alhas - Homepage</title>
+        <title>Ibrahim Alhas - Personal</title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <style>
         * {
@@ -15,7 +15,7 @@
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.6;
-            color: #333;
+            color: #2c3e50;
             background-color: #f8f9fa;
         }
 
@@ -26,12 +26,12 @@
             max-width: 1400px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
         }
 
         /* Sidebar */
         .sidebar {
-            background: #2c3e50;
+            background: #292727;
             color: white;
             padding: 2rem;
             position: sticky;
@@ -46,21 +46,22 @@
         }
 
         .profile-img {
-        width: 180px;
-        height: 180px;
-        margin: 0 auto 1rem;
-        overflow: hidden;
-        border: 4px solid #ecf0f1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f0f0f0;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 4px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
         }
 
         .profile-name {
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
+            color: #ecf0f1;
         }
 
         .profile-title {
@@ -69,21 +70,14 @@
             margin-bottom: 1rem;
         }
 
-        .profile-affiliation {
-            font-size: 0.9rem;
-            color: #ecf0f1;
-            margin-bottom: 1.5rem;
-        }
-
         .contact-info {
             margin-bottom: 2rem;
         }
 
-        .contact-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #34495e;
-            padding-bottom: 0.5rem;
+        .contact-separator { 
+            border: none; 
+            border-top: 1px solid #4a5f7a; 
+            margin: 2rem 0; 
         }
 
         .contact-item {
@@ -92,11 +86,7 @@
             align-items: center;
             gap: 0.5rem;
             font-size: 0.9rem;
-        }
-
-        .contact-item i {
-            width: 20px;
-            color: #3498db;
+            color: #bdc3c7;
         }
 
         .nav-menu {
@@ -108,19 +98,20 @@
         }
 
         .nav-menu a {
-            color: #ecf0f1;
+            color: #bdc3c7;
             text-decoration: none;
             display: block;
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
             border-radius: 4px;
             transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
 
         .nav-menu a:hover,
         .nav-menu a.active {
-            background: #34495e;
+            background: #572b2b;
             padding-left: 1rem;
-            color: #3498db;
+            color: #ecf0f1;
         }
 
         /* Main Content */
@@ -142,20 +133,20 @@
             font-size: 2.5rem;
             color: #2c3e50;
             margin-bottom: 1rem;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 2px solid #7f8c8d;
             padding-bottom: 0.5rem;
         }
 
         .section h2 {
             font-size: 2rem;
-            color: #2c3e50;
+            color: #34495e;
             margin-bottom: 1.5rem;
             margin-top: 2rem;
         }
 
         .section h3 {
             font-size: 1.3rem;
-            color: #34495e;
+            color: #4a5f7a;
             margin-bottom: 1rem;
             margin-top: 1.5rem;
         }
@@ -164,13 +155,15 @@
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
             text-align: justify;
+            color: #2c3e50;
         }
 
         .research-interests {
-            background: #ecf0f1;
+            background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 1.5rem 0;
+            border: 1px solid #e9ecef;
         }
 
         .research-interests h3 {
@@ -189,15 +182,19 @@
             background: white;
             padding: 1rem;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+            color: #2c3e50;
         }
 
         .publication {
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #7f8c8d;
             padding: 1.5rem;
             margin: 1.5rem 0;
             background: #f8f9fa;
             border-radius: 0 8px 8px 0;
+            border: 1px solid #e9ecef;
+            border-left: 4px solid #7f8c8d;
         }
 
         .publication-title {
@@ -208,13 +205,13 @@
         }
 
         .publication-authors {
-            color: #7f8c8d;
+            color: #6c757d;
             margin-bottom: 0.3rem;
         }
 
         .publication-venue {
             font-style: italic;
-            color: #34495e;
+            color: #4a5f7a;
             margin-bottom: 0.5rem;
         }
 
@@ -225,22 +222,27 @@
         .publication-links a {
             display: inline-block;
             margin-right: 1rem;
-            color: #3498db;
+            color: #4a5f7a;
             text-decoration: none;
             font-size: 0.9rem;
+            border: 1px solid #4a5f7a;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
         .publication-links a:hover {
-            text-decoration: underline;
+            background: #4a5f7a;
+            color: white;
         }
 
         .course {
             background: white;
-            border: 1px solid #ddd;
+            border: 1px solid #e9ecef;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
 
         .course-title {
@@ -250,7 +252,7 @@
         }
 
         .course-code {
-            color: #7f8c8d;
+            color: #6c757d;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
@@ -262,25 +264,29 @@
         }
 
         .news-item {
-            padding: 1rem;
-            border-bottom: 1px solid #ecf0f1;
-            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
         }
 
-        .news-date {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            font-weight: bold;
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
         .news-content {
-            margin-top: 0.5rem;
+            color: #2c3e50;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .btn {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: #3498db;
+            background: #7f8c8d;
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -289,7 +295,8 @@
         }
 
         .btn:hover {
-            background: #2980b9;
+            background: rgb(255, 255, 255); /* light translucent white */
+            color: #ffffff; /* ensure text stays white */
         }
 
         .btn-secondary {
@@ -298,6 +305,188 @@
 
         .btn-secondary:hover {
             background: #7f8c8d;
+        }
+
+        /* CV Section Specific Styles */
+        .cv-intro-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .cv-intro-card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+
+        .cv-icon {
+            font-size: 3rem;
+            color: #7f8c8d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(127, 140, 141, 0.15);
+        }
+
+        .cv-text p {
+            margin-bottom: 0.5rem;
+            color: #495057;
+            line-height: 1.5;
+        }
+
+        .cv-text p:last-child {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .cv-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .btn-download, .btn-view {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-download {
+            background: #7f8c8d;
+            color: white;
+            box-shadow: 0 2px 4px rgba(127, 140, 141, 0.2);
+        }
+
+        .btn-download:hover {
+            background: #6c757d;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(127, 140, 141, 0.3);
+        }
+
+        .btn-view {
+            background: transparent;
+            color: #7f8c8d;
+            border: 2px solid #7f8c8d;
+        }
+
+        .btn-view:hover {
+            background: #7f8c8d;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .cv-viewer-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+            margin-top: 2rem;
+        }
+
+        .viewer-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1rem 1.5rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .viewer-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .control-dot.red { background: #95a5a6; }
+        .control-dot.yellow { background: #7f8c8d; }
+        .control-dot.green { background: #6c757d; }
+
+        .viewer-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9rem;
+        }
+
+        .viewer-title i {
+            color: #7f8c8d;
+        }
+
+        .viewer-btn {
+            background: none;
+            border: none;
+            color: #6c757d;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .viewer-btn:hover {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            background: #f8f9fa;
+        }
+
+        #cv-iframe {
+            display: block;
+            background: white;
+        }
+
+        /* Fullscreen styles */
+        .cv-viewer-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            border-radius: 0;
+        }
+
+        .cv-viewer-container.fullscreen .iframe-wrapper {
+            height: calc(100vh - 60px);
+        }
+
+        .cv-viewer-container.fullscreen #cv-iframe {
+            height: 100%;
         }
 
         @media (max-width: 768px) {
@@ -319,8 +508,97 @@
             .main-content {
                 padding: 1rem;
             }
+
+            .cv-intro-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .cv-icon {
+                justify-self: center;
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .cv-actions {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .btn-download, .btn-view {
+                font-size: 0.8rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .viewer-header {
+                padding: 0.75rem 1rem;
+                grid-template-columns: auto 1fr;
+                gap: 0.5rem;
+            }
+
+            .viewer-actions {
+                display: none;
+            }
+
+            .viewer-title {
+                font-size: 0.8rem;
+            }
+
+            #cv-iframe {
+                height: 600px;
+            }
         }
-.contact-separator { border: none; border-top: 2px solid #ccc; margin: 2rem 0; }
+
+        @media (max-width: 480px) {
+            .cv-actions {
+                flex-direction: column;
+            }
+
+            #cv-iframe {
+                height: 500px;
+            }
+        }
+
+            .news-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .news-date {
+                font-weight: bold;
+                color: #4a5f7a;
+                font-size: 0.95rem;
+                white-space: nowrap;
+                margin-right: 1rem;
+                min-width: 110px;
+            }
+
+            .news-line {
+                flex: 1;
+                height: 1px;
+                background-color: #d6d8db;
+                margin-top: 2px;
+            }
+
+            .news-item {
+                padding: 1.5rem 1rem;
+                border: 1px solid #e9ecef;
+                border-radius: 6px;
+                margin-bottom: 1.2rem;
+                background: #ffffff;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            }
+
+            .news-content {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #2c3e50;
+            }
         </style>
     </head>
     <body>
@@ -346,13 +624,10 @@
                 <nav>
                     <ul class="nav-menu">
                         <li>
-                            <a href="#about" class="nav-link active">About</a>
+                            <a href="#home" class="nav-link active">Home</a>
                         </li>
                         <li>
-                            <a href="#publications" class="nav-link">Publications</a>
-                        </li>
-                        <li>
-                            <a href="#research" class="nav-link">Research</a>
+                            <a href="#publications&projects" class="nav-link">Publications & Projects</a>
                         </li>
                         <li>
                             <a href="#cv" class="nav-link">CV</a>
@@ -366,107 +641,170 @@
             <!-- Main Content -->
             <main class="main-content">
                 <!-- About Section -->
-                <section id="about" class="section active">
-                    <h1>About Me</h1>
+                <section id="home" class="section active">
+                    <h1>Greetings, stranger.</h1>
                     <p class="bio-text">
-                        Welcome to my academic homepage! I am an Assistant Professor in the Department of [Your Department] at [Your University]. My research focuses on [your research area], with particular emphasis on [specific focus areas].
+                        Welcome to my personal homepage! I am a Software Engineer, having recently joined the University of Camrbdige's Department of Zoology for a research project as the sole Research Software Engineer.
                     </p>
                     <p class="bio-text">
-                        I received my Ph.D. in [Field] from [University] in [Year], where I worked under the supervision of [Advisor Name]. Before joining [Current University], I was a [previous position] at [Previous Institution].
+                        Before my current role, I worked as a Software Engineer (later promoted to Technical Lead) at the Leverhulme Centre for the Future of Intelligence Institution (LCFI), University of Cambridge.
+                         My primary responsibilities were to develop, improve, and maintain the Animal-AI research environment (see GitHub Repository
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Kinds-of-Intelligence-CFI/animal-ai" target="_blank">
+                            here
+                        </a>
+                        ). To see the research paper I co-authored during my time at LCFI, click
+                        <a href="https://arxiv.org/abs/2312.11414" target="_blank">
+                            here.
+                        </a>
                     </p>
                     <p class="bio-text">
-                        My work has been published in top-tier venues including [Journal Names], and I have been fortunate to receive funding from [Funding Agencies]. I am passionate about [research passion] and enjoy collaborating with students and colleagues on challenging problems.
+                        I received my MSc in Artificial Intelligence from King's College London in 2022, where I worked under the supervision of Dr. Joshua Murphy to develop a novel algorithm to predict whether a Twitter (now X) tweet was factual or fictitious.
+                        You can find my MSc Dissertation paper in my GitHub profile
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/alhasacademy96/A.I.-MSc-FinalYearProject" target="_blank">
+                            here.
+                        </a>
                     </p>
-                    <div class="research-interests">
+                    <div class="interests">
                         <h3>Interests</h3>
                         <ul class="interests-list">
                             <li>Machine Learning & AI</li>
-                            <li>Data Mining</li>
                             <li>Natural Language Processing</li>
                             <li>Computer Vision</li>
                             <li>Nature-Inspired Learning Algorithms</li>
                             <li>Game Development</li>
+                            <li>Mathematics</li>
                         </ul>
                     </div>
                 </section>
                 <!-- Publications Section -->
-                <section id="publications" class="section">
-                    <h1>Publications</h1>
-                    <h2>Journal Articles</h2>
+                <section id="publications&projects" class="section">
+                    <h1>Publications & Projects</h1>
+                    <h2>Publications</h2>
                     <div class="publication">
-                        <div class="publication-title">A Novel Approach to Machine Learning in Complex Systems</div>
+                        <div class="publication-title">The Animal-AI Environment: A Virtual Laboratory For Comparative Cognition and Artificial Intelligence Research</div>
                         <div class="publication-authors">
-                            <strong>Your Name</strong>
-                            , Co-Author Name, Another Author
+                            <strong>Ibrahim Alhas</strong>
+                            , K. Voudouris, W. Schellaert, M. Crosby, L. G. Cheke, M. Halina, J. Hernández-Orallo, et al.
                         </div>
-                        <div class="publication-venue">Journal of Artificial Intelligence Research, 2024</div>
+                        <div class="publication-venue">Arxiv | Springer Nature, Journal of Behaviour Research Methods, 2025</div>
                         <div class="publication-links">
-                            <a href="#" class="btn">PDF</a>
-                            <a href="#" class="btn btn-secondary">Code</a>
-                            <a href="#" class="btn btn-secondary">Data</a>
+                            <a href="https://arxiv.org/abs/2312.11414" target="_blank" class="btn">Arxiv</a>
+                            <a href="https://link.springer.com/article/10.3758/s13428-025-02616-3" target="_blank" class="btn">Springer Nature</a>
+                            <a href="https://github.com/kinds-of-intelligence-cfi/animal-ai" target="_blank" class="btn btn-secondary">Code</a>
                         </div>
                     </div>
-                </section>
-                <!-- Research Section -->
-                <section id="research" class="section">
-                    <h1>Research</h1>
-                    <p class="bio-text">
-                        My research program focuses on developing novel computational methods to address fundamental challenges in [your field]. I am particularly interested in the intersection of [area 1] and [area 2], where traditional approaches often fall short.
-                    </p>
                     <h2>Current Projects</h2>
-                    <h3>Project Title 1</h3>
-                    <p>Description of your current research project, including objectives, methodology, and expected outcomes. Mention any funding sources and collaborators.</p>
-                    <h3>Project Title 2</h3>
-                    <p>Another research project description. Include information about the problem you're solving and why it's important to the field.</p>
-                    <h2>Past Projects</h2>
-                    <h3>Completed Project Title</h3>
-                    <p>Brief description of a completed project and its impact on the field. Include any notable publications or outcomes.</p>
+                    <h3>"ItLivesInTheWoods Pt.1" (Computer Game)</h3>
+                    <p>
+                        What started out as a side project turned into an entrepreneurial endevour! ItLivesInTheWoods is a first-person psychological horror set in the forests of Canada. You are Ibrahim, a father who has recently lost his daughter whilst on a hiking trip in the forest last winter. You hope to find out what happened to your daughter and whether you can reunite with her. 
+                        Link to Steam game page
+                        <i class="fab fa-steam"></i>
+                        <a href="https://store.steampowered.com/app/1852980/ItLivesInTheWoods/?beta=0" target="_blank">
+                            here.
+                        </a>
+                    </p>
+                    <h2>Future Projects</h2>
+                    <h3>"ItLivesInTheWoods Pt.2" (Computer Game)</h3>
+                    <p>The next installment to my original indie game. Will likely commence development in late 2026.</p>
                 </section>
                 <!-- CV Section -->
                 <section id="cv" class="section">
                     <h1>Curriculum Vitae</h1>
-                    <p>
-                        You can view my CV directly below. You can also
-                        <a href="IbrahimAlhasCV.pdf" target="_blank">download it here</a>
-                        .
-                    </p>
-                    <iframe
-                        src="web/viewer.html?file=../IbrahimAlhasCV.pdf"
-                        width="100%"
-                        height="900px"
-                        style="border: none;"
-                        allowfullscreen
-                    ></iframe>
+                    <div class="cv-intro-card">
+                        <div class="cv-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="cv-text">
+                            <p>Explore my professional journey, academic achievements, and technical expertise in the interactive document below.</p>
+                            <p>For offline viewing or sharing, you can download the complete PDF version.</p>
+                        </div>
+                        <div class="cv-actions">
+                            <a href="IbrahimAlhasCV.pdf" target="_blank" class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </a>
+                            <a href="IbrahimAlhasCV.pdf" target="_blank" class="btn-view">
+                                <i class="fas fa-external-link-alt"></i>
+                                Open in New Tab
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cv-viewer-container">
+                        <div class="viewer-header">
+                            <div class="viewer-controls">
+                                <span class="control-dot red"></span>
+                                <span class="control-dot yellow"></span>
+                                <span class="control-dot green"></span>
+                            </div>
+                            <div class="viewer-title">
+                                <i class="fas fa-file-pdf"></i>
+                                Ibrahim Alhas - Curriculum Vitae
+                            </div>
+                            <div class="viewer-actions">
+                                <button class="viewer-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="iframe-wrapper">
+                            <iframe
+                                id="cv-iframe"
+                                src="web/viewer.html?file=../IbrahimAlhasCV.pdf"
+                                width="100%"
+                                height="900px"
+                                style="border: none;"
+                                allowfullscreen
+                                title="Ibrahim Alhas CV"
+                            ></iframe>
+                        </div>
+                    </div>
                 </section>
                 <!-- News Section -->
                 <section id="news" class="section">
                     <h1>News</h1>
                     <div class="news-item">
-                        <div class="news-date">2025-06-01</div>
+                        <div class="news-header">
+                            <div class="news-date">June 2025</div>
+                            <div class="news-line"></div>
+                        </div>
                         <div class="news-content">
                             Joined the Department of Zoology and Department of Computer Science teams at the University of Cambridge as Research Software Engineer.
                         </div>
                     </div>
                     <div class="news-item">
-                        <div class="news-date">2023-01-01</div>
+                        <div class="news-header">
+                            <div class="news-date">January 2023</div>
+                            <div class="news-line"></div>
+                        </div>
                         <div class="news-content">
                             Joined the Centre for the Future of Intelligence at the University of Cambridge as Software Engineer. Promoted to Lead Software Engineer a year later.
                         </div>
                     </div>
                     <div class="news-item">
-                        <div class="news-date">2022-08-14</div>
+                        <div class="news-header">
+                            <div class="news-date">August 2022</div>
+                            <div class="news-line"></div>
+                        </div>
                         <div class="news-content">
                             Joined a startup building water detection hardware as an Intern Software Engineer.
                         </div>
                     </div>
                     <div class="news-item">
-                        <div class="news-date">2022-08-01</div>
+                        <div class="news-header">
+                            <div class="news-date">August 2022</div>
+                            <div class="news-line"></div>
+                        </div>
                         <div class="news-content">
                             Graduated with a Master's degree in Artificial Intelligence from King's College London (KCL).
                         </div>
                     </div>
                     <div class="news-item">
-                        <div class="news-date">2022-02-01</div>
+                        <div class="news-header">
+                            <div class="news-date">February 2022</div>
+                            <div class="news-line"></div>
+                        </div>
                         <div class="news-content">
                             Graduated with a Bachelor's degree in Computer Science from the University of Westminster.
                         </div>
@@ -499,6 +837,31 @@
                     }
                 });
             });
+        });
+
+        function toggleFullscreen() {
+            const container = document.querySelector('.cv-viewer-container');
+            const btn = document.querySelector('.viewer-btn i');
+            
+            if (container.classList.contains('fullscreen')) {
+                container.classList.remove('fullscreen');
+                btn.className = 'fas fa-expand';
+                btn.parentElement.title = 'Toggle Fullscreen';
+            } else {
+                container.classList.add('fullscreen');
+                btn.className = 'fas fa-compress';
+                btn.parentElement.title = 'Exit Fullscreen';
+            }
+        }
+
+        // Close fullscreen with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const container = document.querySelector('.cv-viewer-container');
+                if (container.classList.contains('fullscreen')) {
+                    toggleFullscreen();
+                }
+            }
         });
         </script>
     </body>
