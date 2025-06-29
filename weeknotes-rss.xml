@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://alhasacademy96.github.io/alhasacademy.github.io/rss-style.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ibrahim Alhas - Weeknotes</title>
+        <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+        <description>Weekly reflections, updates, and thoughts from Ibrahim Alhas on research, projects, and life</description>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 07 Jun 2025 12:00:00 +0000</lastBuildDate>
+        <copyright>Copyright © 2025 Ibrahim Alhas</copyright>
+        <atom:link href="https://alhasacademy96.github.io/alhasacademy.github.io/weeknotes-rss.xml" rel="self"
+            type="application/rss+xml" />
+        <item>
+            <title>Week 23, 2025: Research Software Engineering at Cambridge Zoology</title>
+            <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+            <description>
+                <![CDATA[
+                <p><strong>Research Software Engineering at Cambridge Zoology</strong></p>
+                <p>This week marked the beginning of my role as Research Software Engineer at the University of Cambridge's Department of Zoology. The transition from LCFI has been smooth, and I'm excited to work on new research projects that combine my software engineering expertise with biological research.</p>
+                <p>Key highlights:</p>
+                <ul>
+                    <li>Met with the research teams to understand current computational needs</li>
+                    <li>Started familiarizing myself with existing data pipelines and analysis tools</li>
+                    <li>Began planning infrastructure improvements for research workflows</li>
+                </ul>
+                ]]>
+            </description>
+            <pubDate>Sat, 07 Jun 2025 12:00:00 +0000</pubDate>
+            <guid isPermaLink="false">
+                https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes-2025-w23</guid>
+            <author>alhasacademy@gmail.com (Ibrahim Alhas)</author>
+            <category>Weeknotes</category>
+            <category>Research</category>
+            <category>Career</category>
+        </item>
+        <item>
+            <title>Week 22, 2025: Wrapping Up at LCFI</title>
+            <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+            <description>
+                <![CDATA[
+                <p><strong>Wrapping Up at LCFI</strong></p>
+                <p>My final week at the Leverhulme Centre for the Future of Intelligence was bittersweet. After two years of working on the Animal-AI environment, it's time to pass the torch to the next team.</p>
+                <p>Final tasks completed:</p>
+                <ul>
+                    <li>Documentation handover for the Animal-AI environment</li>
+                    <li>Final code reviews and bug fixes</li>
+                    <li>Knowledge transfer sessions with incoming team members</li>
+                </ul>
+                <p>The Animal-AI project has been published and is now being used by researchers worldwide, which is incredibly rewarding to see.</p>
+                ]]>
+            </description>
+            <pubDate>Sat, 31 May 2025 12:00:00 +0000</pubDate>
+            <guid isPermaLink="false">
+                https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes-2025-w22</guid>
+            <author>alhasacademy@gmail.com (Ibrahim Alhas)</author>
+            <category>Weeknotes</category>
+            <category>Career</category>
+            <category>Projects</category>
+        </item>
+        <item>
+            <title>Week 21, 2025: Game Development &amp; Research Balance</title>
+            <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+            <description>
+                <![CDATA[
+                <p><strong>Game Development & Research Balance</strong></p>
+                <p>Balancing my research work with ongoing game development has been challenging but rewarding. "ItLivesInTheWoods" continues to receive positive feedback from the community.</p>
+                <p>This week's focus:</p>
+                <ul>
+                    <li>Bug fixes and performance optimizations for the game</li>
+                    <li>Planning for "ItLivesInTheWoods Pt.2" development timeline</li>
+                    <li>Research on new AI techniques that could enhance future game mechanics</li>
+                </ul>
+                <p>The intersection of AI research and game development continues to fascinate me, and I'm exploring ways to incorporate more sophisticated AI systems in future projects.</p>
+                ]]>
+            </description>
+            <pubDate>Sat, 24 May 2025 12:00:00 +0000</pubDate>
+            <guid isPermaLink="false">
+                https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes-2025-w21</guid>
+            <author>alhasacademy@gmail.com (Ibrahim Alhas)</author>
+            <category>Weeknotes</category>
+            <category>Projects</category>
+            <category>Games</category>
+            <category>AI</category>
+        </item>
+        <item>
+            <title>Week 20, 2025: Preparing for the Transition</title>
+            <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+            <description>
+                <![CDATA[
+                <p><strong>Preparing for the Transition</strong></p>
+                <p>This week has been all about preparing for my upcoming move to the Department of Zoology. The transition period is always interesting - wrapping up current projects while mentally preparing for new challenges.</p>
+                <p>Key activities:</p>
+                <ul>
+                    <li>Finalizing documentation for ongoing Animal-AI research</li>
+                    <li>Meeting with the Zoology team to understand their computational needs</li>
+                    <li>Researching current tools and methodologies in computational biology</li>
+                    <li>Planning how to apply my AI/ML expertise to biological research questions</li>
+                </ul>
+                <p>I'm particularly excited about the opportunity to work at the intersection of computer science and biology, which feels like a natural evolution of my research interests.</p>
+                ]]>
+            </description>
+            <pubDate>Sat, 17 May 2025 12:00:00 +0000</pubDate>
+            <guid isPermaLink="false">
+                https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes-2025-w20</guid>
+            <author>alhasacademy@gmail.com (Ibrahim Alhas)</author>
+            <category>Weeknotes</category>
+            <category>Career</category>
+            <category>Research</category>
+        </item>
+        <item>
+            <title>Week 19, 2025: AI Research &amp; Game Mechanics</title>
+            <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+            <description>
+                <![CDATA[
+                <p><strong>AI Research & Game Mechanics</strong></p>
+                <p>Spent this week exploring how my AI research can inform game development and vice versa. The Animal-AI environment has given me insights into how AI agents learn and adapt, which could be fascinating to apply to game NPCs.</p>
+                <p>Research focus:</p>
+                <ul>
+                    <li>Studying emergent behaviors in AI agents</li>
+                    <li>Exploring procedural content generation techniques</li>
+                    <li>Investigating adaptive difficulty systems based on player behavior</li>
+                    <li>Planning AI-driven narrative elements for future games</li>
+                </ul>
+                <p>The more I work in both fields, the more I see the potential for cross-pollination between AI research and game development.</p>
+                ]]>
+            </description>
+            <pubDate>Sat, 10 May 2025 12:00:00 +0000</pubDate>
+            <guid isPermaLink="false">
+                https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes-2025-w19</guid>
+            <author>alhasacademy@gmail.com (Ibrahim Alhas)</author>
+            <category>Weeknotes</category>
+            <category>Research</category>
+            <category>AI</category>
+            <category>Games</category>
+        </item>
+    </channel>
+</rss> 
