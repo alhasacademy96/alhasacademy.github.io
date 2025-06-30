@@ -9,6 +9,9 @@ on:
 jobs:
   update-rss:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
     
     steps:
     - name: Checkout repository
@@ -42,7 +45,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add rss.xml weeknotes-rss.xml
         git commit -m "Auto-update RSS feeds - $(date +'%Y-%m-%d')"
-        git push
+        git push origin main
         
     - name: No changes found
       if: steps.check_changes.outputs.has_changes == 'false'
