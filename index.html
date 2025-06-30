@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ibrahim Alhas - Personal</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link rel="alternate" type="application/rss+xml" title="Ibrahim Alhas RSS Feed" href="rss.xml">
-        <link rel="alternate" type="application/rss+xml" title="Ibrahim Alhas Weeknotes RSS Feed" href="weeknotes-rss.xml">
-        <style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Alhas - Personal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="Ibrahim Alhas RSS Feed" href="rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Ibrahim Alhas Weeknotes RSS Feed" href="weeknotes-rss.xml">
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -28,7 +29,7 @@
             max-width: 1400px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
         }
 
         /* Sidebar */
@@ -76,11 +77,12 @@
             margin-bottom: 2rem;
         }
 
-        .contact-separator { 
-            border: none; 
-            height: 2px; 
-            background: linear-gradient(to right, transparent, #4a5f7a, transparent); 
-            margin: 2rem 0; }
+        .contact-separator {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #4a5f7a, transparent);
+            margin: 2rem 0;
+        }
 
         .contact-item {
             margin-bottom: 0.8rem;
@@ -184,7 +186,7 @@
             background: white;
             padding: 1rem;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             border: 1px solid #e9ecef;
             color: #2c3e50;
         }
@@ -244,7 +246,7 @@
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
         }
 
         .course-title {
@@ -278,6 +280,7 @@
             border-bottom: none;
             margin-bottom: 0;
         }
+
         /* Alternative: Bullet points using CSS */
         .news-content.with-bullet {
             position: relative;
@@ -304,8 +307,10 @@
         }
 
         .btn:hover {
-            background: #6c757d; /* darker gray on hover */
-            color: #ffffff; /* ensure text stays white */
+            background: #6c757d;
+            /* darker gray on hover */
+            color: #ffffff;
+            /* ensure text stays white */
         }
 
         .btn-secondary {
@@ -327,12 +332,12 @@
             grid-template-columns: auto 1fr auto;
             gap: 1.5rem;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
             transition: all 0.3s ease;
         }
 
         .cv-intro-card:hover {
-            box-shadow: 0 8px 15px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
             transform: translateY(-2px);
         }
 
@@ -367,7 +372,8 @@
             gap: 0.5rem;
         }
 
-        .btn-download, .btn-view {
+        .btn-download,
+        .btn-view {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -408,7 +414,7 @@
         .cv-viewer-container {
             background: white;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
             overflow: hidden;
             border: 1px solid #e9ecef;
             margin-top: 2rem;
@@ -436,9 +442,17 @@
             display: block;
         }
 
-        .control-dot.red { background: #95a5a6; }
-        .control-dot.yellow { background: #7f8c8d; }
-        .control-dot.green { background: #6c757d; }
+        .control-dot.red {
+            background: #95a5a6;
+        }
+
+        .control-dot.yellow {
+            background: #7f8c8d;
+        }
+
+        .control-dot.green {
+            background: #6c757d;
+        }
 
         .viewer-title {
             display: flex;
@@ -502,18 +516,18 @@
             .container {
                 grid-template-columns: 1fr;
             }
-            
+
             .sidebar {
                 position: relative;
                 height: auto;
             }
-            
+
             .profile-img {
                 width: 120px;
                 height: 120px;
                 font-size: 3rem;
             }
-            
+
             .main-content {
                 padding: 1rem;
             }
@@ -538,7 +552,8 @@
                 flex-wrap: wrap;
             }
 
-            .btn-download, .btn-view {
+            .btn-download,
+            .btn-view {
                 font-size: 0.8rem;
                 padding: 0.6rem 1.2rem;
             }
@@ -572,456 +587,414 @@
             }
         }
 
-            .news-header {
-                display: flex;
-                align-items: center;
-                margin-bottom: 0.5rem;
-            }
-
-            .news-date {
-                font-weight: bold;
-                color: #4a5f7a;
-                font-size: 0.95rem;
-                white-space: nowrap;
-                margin-right: 1rem;
-                min-width: 110px;
-            }
-
-            .news-line {
-                flex: 1;
-                height: 1px;
-                background-color: #d6d8db;
-                margin-top: 2px;
-            }
-
-            .news-item {
-                padding: 1.5rem 1rem;
-                border: 1px solid #e9ecef;
-                border-radius: 6px;
-                margin-bottom: 1.2rem;
-                background: #ffffff;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-            }
-
-            .news-content {
-                font-size: 1rem;
-                line-height: 1.6;
-                color: #2c3e50;
-                margin-bottom: 0.75rem;
-            }
-            a {
-                color: #572b2b; /* match sidebar nav text */
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
-
-            a:hover {
-                color: #7f8c8d; /* darker tone for hover that's visible on light backgrounds */
-                text-decoration: underline;
-            }
-            .icon-link {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 23px;
-                height: 23px;
-                border-radius: 50%;
-                text-decoration: none;
-                transition: background 0.3s ease;
-                color: #bdc3c7;
-                background: transparent;
-            }
-
-            .icon-link:hover {
-                background: rgba(255, 255, 255, 0.1); /* light transparent white background */
-                color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="profile-section">
-                    <div class="profile-img">
-                        <img src="profile.jpg" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="profile-name">Ibrahim Alhas</div>
-                    <div class="profile-title">Software Engineer</div>
-                    <div class="contact-item" style="justify-content: center; gap: 0.5rem;">
-                        <a
-                            href="https://www.linkedin.com/in/alhasacademy/"
-                            target="_blank"
-                            class="icon-link"
-                            title="LinkedIn"
-                        >
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a
-                            href="https://store.steampowered.com/curator/41655061"
-                            target="_blank"
-                            class="icon-link"
-                            title="Steam"
-                        >
-                            <i class="fab fa-steam"></i>
-                        </a>
-                        <a
-                            href="https://github.com/alhasacademy96"
-                            target="_blank"
-                            class="icon-link"
-                            title="GitHub"
-                        >
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a
-                            href="https://alhasacademy96.github.io/alhasacademy.github.io/rss.xml"
-                            target="_blank"
-                            class="icon-link"
-                            title="RSS Feed"
-                        >
-                            <i class="fas fa-rss"></i>
-                        </a>
-                        <a
-                            href="https://alhasacademy96.github.io/alhasacademy.github.io/weeknotes-rss.xml"
-                            target="_blank"
-                            class="icon-link"
-                            title="Weeknotes RSS Feed"
-                        >
-                            <i class="fas fa-calendar-week"></i>
-                        </a>
-                    </div>
-                    <hr class="contact-separator">
-                </div>
-                <nav>
-                    <ul class="nav-menu">
-                        <li>
-                            <a href="#home" class="nav-link active">Home</a>
-                        </li>
-                        <li>
-                            <a href="#publications&projects" class="nav-link">Publications & Projects</a>
-                        </li>
-                        <li>
-                            <a href="#cv" class="nav-link">CV</a>
-                        </li>
-                        <li>
-                            <a href="#news" class="nav-link">News</a>
-                        </li>
-                        <li>
-                            <a href="#weeknotes" class="nav-link">Weeknotes</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-            <!-- Main Content -->
-            <main class="main-content">
-                <!-- About Section -->
-                <section id="home" class="section active">
-                    <h1>Greetings, stranger.</h1>
-                    <p class="bio-text">
-                        Welcome to my personal homepage! I am a Software Engineer, having recently joined the University of Cambridge's Department of Zoology for a research project as the sole Research Software Engineer.
-                    </p>
-                    <p class="bio-text">
-                        Before my current role, I worked as a Software Engineer (later promoted to Technical Lead) at the Leverhulme Centre for the Future of Intelligence Institution (LCFI), University of Cambridge.
-                         My primary responsibilities were to develop, improve, and maintain the Animal-AI research environment. If interested, see the GitHub Repository
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/Kinds-of-Intelligence-CFI/animal-ai" target="_blank">
-                            here.
-                        </a>
-                    </p>
-                    <p class="bio-text">
-                        I received my MSc in Artificial Intelligence from King's College London in 2022, where I worked under the supervision of Dr. Joshua Murphy to develop a novel algorithm to predict whether a Twitter (now X) tweet was factual or fictitious.
-                        You can find my MSc Dissertation paper in my GitHub profile
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/alhasacademy96/A.I.-MSc-FinalYearProject" target="_blank">
-                            here.
-                        </a>
-                    </p>
-                    <p class="bio-text">In my spare time, I love reading books to expand my knowledge and explore new ideas. I am also an avid gamer (and game developer), always on the lookout for the next great virtual adventure.</p>
-
-                    <div class="interests">
-                        <h3>Interests</h3>
-                        <ul class="interests-list">
-                            <li>Machine Learning & AI</li>
-                            <li>Natural Language Processing</li>
-                            <li>Computer Vision</li>
-                            <li>Nature-Inspired Learning Algorithms</li>
-                            <li>Game Development</li>
-                            <li>Mathematics</li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- Publications & Projects Section -->
-                <section id="publications&projects" class="section">
-                    <h1>Publications & Projects</h1>
-                    <h2>Publications</h2>
-                    <div class="publication">
-                        <div class="publication-title">The Animal-AI Environment: A Virtual Laboratory For Comparative Cognition and Artificial Intelligence Research</div>
-                        <div class="publication-authors">
-                            <strong>Ibrahim Alhas</strong>
-                            , K. Voudouris, W. Schellaert, M. Crosby, L. G. Cheke, M. Halina, J. Hernández-Orallo, et al.
-                        </div>
-                        <div class="publication-venue">Arxiv | Springer Nature, Journal of Behaviour Research Methods, 2025</div>
-                        <div class="publication-links">
-                            <a href="https://arxiv.org/abs/2312.11414" target="_blank" class="btn">Arxiv</a>
-                            <a href="https://link.springer.com/article/10.3758/s13428-025-02616-3" target="_blank" class="btn">Springer Nature</a>
-                            <a href="https://github.com/kinds-of-intelligence-cfi/animal-ai" target="_blank" class="btn btn-secondary">Code</a>
-                        </div>
-                    </div>
-                    <h2>Current Projects</h2>
-                    <h3>"ItLivesInTheWoods Pt.1" (Computer Game)</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-bottom: 2rem;">
-                        <div style="flex: 1 1 300px; min-width: 250px;">
-                            <img src="itlivesinthewoodspt1.jpg" alt="ItLivesInTheWoods Screenshot" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        </div>
-                        <div style="flex: 2 1 400px; min-width: 250px;">
-                            <p>
-                                What started out as a side project turned into an entrepreneurial endeavour!
-                                <strong>ItLivesInTheWoods</strong>
-                                is a first-person psychological horror set in the forests of Canada.
-                                You are Ibrahim, a father who has recently lost his daughter whilst on a hiking trip in the forest last winter. You hope to find out what happened to your daughter and whether you can reunite with her.
-                            </p>
-                            <p>
-                                View the game on Steam
-                                <i class="fab fa-steam"></i>
-                                <a href="https://store.steampowered.com/app/1852980/ItLivesInTheWoods/?beta=0" target="_blank">here.</a>
-                            </p>
-                        </div>
-                    </div>
-                    <h2>Future Projects</h2>
-                    <h3>"ItLivesInTheWoods Pt.2" (Computer Game)</h3>
-                    <p>The next instalment to my original indie game. Will likely commence development in late 2026.</p>
-                </section>
-                <!-- CV Section -->
-                <section id="cv" class="section">
-                    <h1>Curriculum Vitae</h1>
-                    <div class="cv-intro-card">
-                        <div class="cv-icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="cv-text">
-                            <p>Explore my professional journey, academic achievements, and technical expertise in the interactive document below.</p>
-                            <p>For offline viewing or sharing, you can download the complete PDF version.</p>
-                        </div>
-                        <div class="cv-actions">
-                            <a href="IbrahimAlhasCV.pdf" target="_blank" class="btn-download">
-                                <i class="fas fa-download"></i>
-                                Download PDF
-                            </a>
-                            <a href="IbrahimAlhasCV.pdf" target="_blank" class="btn-view">
-                                <i class="fas fa-external-link-alt"></i>
-                                Open in New Tab
-                            </a>
-                        </div>
-                    </div>
-                    <div class="cv-viewer-container">
-                        <div class="viewer-header">
-                            <div class="viewer-controls">
-                                <span class="control-dot red"></span>
-                                <span class="control-dot yellow"></span>
-                                <span class="control-dot green"></span>
-                            </div>
-                            <div class="viewer-title">
-                                <i class="fas fa-file-pdf"></i>
-                                Ibrahim Alhas - Curriculum Vitae
-                            </div>
-                            <div class="viewer-actions">
-                                <button class="viewer-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
-                                    <i class="fas fa-expand"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="iframe-wrapper">
-                            <iframe
-                                id="cv-iframe"
-                                src="web/viewer.html?file=../IbrahimAlhasCV.pdf"
-                                width="100%"
-                                height="900px"
-                                style="border: none;"
-                                allowfullscreen
-                                title="Ibrahim Alhas CV"
-                            ></iframe>
-                        </div>
-                    </div>
-                </section>
-                <!-- News Section -->
-                <section id="news" class="section">
-                    <h1>So, what's been happening?</h1>
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">June 2025</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            Joined the Department of Zoology and Department of Computer Science teams at the University of Cambridge as Research Software Engineer.
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">January 2023</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            Joined the Centre for the Future of Intelligence at the University of Cambridge as Software Engineer. Promoted to Lead Software Engineer a year later.
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">August 2022</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            Joined a startup building water detection hardware as an Intern Software Engineer.
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">August 2022</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content with-bullet">
-                            Graduated with a Master's degree in Artificial Intelligence from King's College London (KCL).
-                        </div>
-                        <div class="news-content with-bullet">
-                            Game development project "ItLivesInTheWoods" started as a solo side project, later to be a Steam commercial release.
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">February 2022</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            Graduated with a Bachelor's degree in Computer Science from the University of Westminster.
-                        </div>
-                    </div>
-                </section>
-                <!-- Weeknotes Section -->
-                <section id="weeknotes" class="section">
-                    <h1>Weeknotes</h1>
-                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 1px solid #dee2e6; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1.5rem;">
-                        <div style="font-size: 2.5rem; color: #7f8c8d;">
-                            <i class="fas fa-calendar-week"></i>
-                        </div>
-                        <div style="flex: 1;">
-                            <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50;">Weekly Reflections & Updates</h3>
-                            <p style="margin: 0; color: #6c757d; line-height: 1.5;">
-                                Regular updates on my work, projects, and thoughts. Subscribe to the RSS feed to stay updated with my weekly notes.
-                            </p>
-                        </div>
-                        <div>
-                            <a href="weeknotes-rss.xml" target="_blank" class="btn-download" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                                <i class="fas fa-rss"></i>
-                                RSS Feed
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">Week 23, 2025</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            <p><strong>Research Software Engineering at Cambridge Zoology</strong></p>
-                            <p>This week marked the beginning of my role as Research Software Engineer at the University of Cambridge's Department of Zoology. The transition from LCFI has been smooth, and I'm excited to work on new research projects that combine my software engineering expertise with biological research.</p>
-                            <p>Key highlights:</p>
-                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                <li>Met with the core team in conjunction with Department of Computer Science to understand immediate project needs.</li>
-                                <li>Started familiarizing myself with existing data pipelines and analysis tools.</li>
-                                <li>Began deep research into the current state of the pipeline.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">Week 22, 2025</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            <p><strong>Wrapping Up at LCFI</strong></p>
-                            <p>My final week at the Leverhulme Centre for the Future of Intelligence was bittersweet. After two years of working on the Animal-AI environment, it's time to pass the torch to the next team.</p>
-                            <p>Final tasks completed:</p>
-                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                <li>Documentation handover for the Animal-AI environment</li>
-                                <li>Final code reviews and bug fixes</li>
-                                <li>Knowledge transfer sessions with incoming team members</li>
-                            </ul>
-                            <p>The Animal-AI project has been published and is now being used by researchers worldwide, which is incredibly rewarding to see.</p>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <div class="news-header">
-                            <div class="news-date">Week 21, 2025</div>
-                            <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">
-                            <p><strong>Game Development & Research Balance</strong></p>
-                            <p>Balancing my research work with ongoing game development has been challenging but rewarding. "ItLivesInTheWoods" continues to receive positive feedback from the community.</p>
-                            <p>This week's focus:</p>
-                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                <li>Bug fixes and performance optimizations for the game</li>
-                                <li>Planning for "ItLivesInTheWoods Pt.2" development timeline</li>
-                                <li>Research on new AI techniques that could enhance future game mechanics</li>
-                            </ul>
-                            <p>The intersection of AI research and game development continues to fascinate me, and I'm exploring ways to incorporate more sophisticated AI systems in future projects.</p>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-        <script>
-        // Navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('.section');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active class from all nav links and sections
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    sections.forEach(s => s.classList.remove('active'));
-                    
-                    // Add active class to clicked link
-                    this.classList.add('active');
-                    
-                    // Show corresponding section
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                        targetSection.classList.add('active');
-                    }
-                });
-            });
-        });
-
-        function toggleFullscreen() {
-            const container = document.querySelector('.cv-viewer-container');
-            const btn = document.querySelector('.viewer-btn i');
-            
-            if (container.classList.contains('fullscreen')) {
-                container.classList.remove('fullscreen');
-                btn.className = 'fas fa-expand';
-                btn.parentElement.title = 'Toggle Fullscreen';
-            } else {
-                container.classList.add('fullscreen');
-                btn.className = 'fas fa-compress';
-                btn.parentElement.title = 'Exit Fullscreen';
-            }
+        .news-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
         }
 
-        // Close fullscreen with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const container = document.querySelector('.cv-viewer-container');
-                if (container.classList.contains('fullscreen')) {
-                    toggleFullscreen();
+        .news-date {
+            font-weight: bold;
+            color: #4a5f7a;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            margin-right: 1rem;
+            min-width: 110px;
+        }
+
+        .news-line {
+            flex: 1;
+            height: 1px;
+            background-color: #d6d8db;
+            margin-top: 2px;
+        }
+
+        .news-item {
+            padding: 1.5rem 1rem;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+
+        .news-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+        }
+
+        a {
+            color: #572b2b;
+            /* match sidebar nav text */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #7f8c8d;
+            /* darker tone for hover that's visible on light backgrounds */
+            text-decoration: underline;
+        }
+
+        .icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            color: #bdc3c7;
+            background: transparent;
+        }
+
+        .icon-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            /* light transparent white background */
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img">
+                    <img src="profile.jpg" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="profile-name">Ibrahim Alhas</div>
+                <div class="profile-title">Software Engineer</div>
+                <div class="contact-item" style="justify-content: center; gap: 0.5rem;">
+                    <a href="https://www.linkedin.com/in/alhasacademy/" target="_blank" class="icon-link"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://store.steampowered.com/curator/41655061" target="_blank" class="icon-link"
+                        title="Steam">
+                        <i class="fab fa-steam"></i>
+                    </a>
+                    <a href="https://github.com/alhasacademy96" target="_blank" class="icon-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://alhasacademy96.github.io/alhasacademy.github.io/rss.xml" target="_blank"
+                        class="icon-link" title="RSS Feed">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                    <a href="https://alhasacademy96.github.io/alhasacademy.github.io/weeknotes-rss.xml" target="_blank"
+                        class="icon-link" title="Weeknotes RSS Feed">
+                        <i class="fas fa-calendar-week"></i>
+                    </a>
+                </div>
+                <hr class="contact-separator">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#publications&projects" class="nav-link">Publications & Projects</a>
+                    </li>
+                    <li>
+                        <a href="#cv" class="nav-link">CV</a>
+                    </li>
+                    <li>
+                        <a href="#news" class="nav-link">News</a>
+                    </li>
+                    <li>
+                        <a href="#weeknotes" class="nav-link">Weeknotes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Section -->
+            <section id="home" class="section active">
+                <h1>Greetings, stranger.</h1>
+                <p class="bio-text">
+                    Welcome to my personal homepage! I am a Software Engineer, having recently joined the University of
+                    Cambridge's Department of Zoology for a research project as the sole Research Software Engineer.
+                </p>
+                <p class="bio-text">
+                    Before my current role, I worked as a Software Engineer (later promoted to Technical Lead) at the
+                    Leverhulme Centre for the Future of Intelligence Institution (LCFI), University of Cambridge.
+                    My primary responsibilities were to develop, improve, and maintain the Animal-AI research
+                    environment. If interested, see the GitHub Repository
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Kinds-of-Intelligence-CFI/animal-ai" target="_blank">
+                        here.
+                    </a>
+                </p>
+                <p class="bio-text">
+                    I received my MSc in Artificial Intelligence from King's College London in 2022, where I worked
+                    under the supervision of Dr. Joshua Murphy to develop a novel algorithm to predict whether a Twitter
+                    (now X) tweet was factual or fictitious.
+                    You can find my MSc Dissertation paper in my GitHub profile
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/alhasacademy96/A.I.-MSc-FinalYearProject" target="_blank">
+                        here.
+                    </a>
+                </p>
+                <p class="bio-text">In my spare time, I love reading books to expand my knowledge and explore new ideas.
+                    I am also an avid gamer (and game developer), always on the lookout for the next great virtual
+                    adventure.</p>
+
+                <div class="interests">
+                    <h3>Interests</h3>
+                    <ul class="interests-list">
+                        <li>Machine Learning & AI</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Nature-Inspired Learning Algorithms</li>
+                        <li>Game Development</li>
+                        <li>Mathematics</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Publications & Projects Section -->
+            <section id="publications&projects" class="section">
+                <h1>Publications & Projects</h1>
+                <h2>Publications</h2>
+                <div class="publication">
+                    <div class="publication-title">The Animal-AI Environment: A Virtual Laboratory For Comparative
+                        Cognition and Artificial Intelligence Research</div>
+                    <div class="publication-authors">
+                        <strong>Ibrahim Alhas</strong>
+                        , K. Voudouris, W. Schellaert, M. Crosby, L. G. Cheke, M. Halina, J. Hernández-Orallo, et al.
+                    </div>
+                    <div class="publication-venue">Arxiv | Springer Nature, Journal of Behaviour Research Methods, 2025
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2312.11414" target="_blank" class="btn">Arxiv</a>
+                        <a href="https://link.springer.com/article/10.3758/s13428-025-02616-3" target="_blank"
+                            class="btn">Springer Nature</a>
+                        <a href="https://github.com/kinds-of-intelligence-cfi/animal-ai" target="_blank"
+                            class="btn btn-secondary">Code</a>
+                    </div>
+                </div>
+                <h2>Current Projects</h2>
+                <h3>"ItLivesInTheWoods Pt.1" (Computer Game)</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-bottom: 2rem;">
+                    <div style="flex: 1 1 300px; min-width: 250px;">
+                        <img src="itlivesinthewoodspt1.jpg" alt="ItLivesInTheWoods Screenshot"
+                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="flex: 2 1 400px; min-width: 250px;">
+                        <p>
+                            What started out as a side project turned into an entrepreneurial endeavour!
+                            <strong>ItLivesInTheWoods</strong>
+                            is a first-person psychological horror set in the forests of Canada.
+                            You are Ibrahim, a father who has recently lost his daughter whilst on a hiking trip in the
+                            forest last winter. You hope to find out what happened to your daughter and whether you can
+                            reunite with her.
+                        </p>
+                        <p>
+                            View the game on Steam
+                            <i class="fab fa-steam"></i>
+                            <a href="https://store.steampowered.com/app/1852980/ItLivesInTheWoods/?beta=0"
+                                target="_blank">here.</a>
+                        </p>
+                    </div>
+                </div>
+                <h2>Future Projects</h2>
+                <h3>"ItLivesInTheWoods Pt.2" (Computer Game)</h3>
+                <p>The next instalment to my original indie game. Will likely commence development in late 2026.</p>
+            </section>
+            <!-- CV Section -->
+            <section id="cv" class="section">
+                <h1>Curriculum Vitae</h1>
+                <div class="cv-intro-card">
+                    <div class="cv-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="cv-text">
+                        <p>Explore my professional journey, academic achievements, and technical expertise in the
+                            interactive document below.</p>
+                        <p>For offline viewing or sharing, you can download the complete PDF version.</p>
+                    </div>
+                    <div class="cv-actions">
+                        <a href="IbrahimAlhasCV.pdf" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </a>
+                        <a href="IbrahimAlhasCV.pdf" target="_blank" class="btn-view">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open in New Tab
+                        </a>
+                    </div>
+                </div>
+                <div class="cv-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-controls">
+                            <span class="control-dot red"></span>
+                            <span class="control-dot yellow"></span>
+                            <span class="control-dot green"></span>
+                        </div>
+                        <div class="viewer-title">
+                            <i class="fas fa-file-pdf"></i>
+                            Ibrahim Alhas - Curriculum Vitae
+                        </div>
+                        <div class="viewer-actions">
+                            <button class="viewer-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="iframe-wrapper">
+                        <iframe id="cv-iframe" src="web/viewer.html?file=../IbrahimAlhasCV.pdf" width="100%"
+                            height="900px" style="border: none;" allowfullscreen title="Ibrahim Alhas CV"></iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- News Section -->
+            <section id="news" class="section">
+                <h1>So, what's been happening?</h1>
+                <div class="news-item">
+                    <div class="news-header">
+                        <div class="news-date">June 2025</div>
+                        <div class="news-line"></div>
+                    </div>
+                    <div class="news-content">
+                        Joined the Department of Zoology and Department of Computer Science teams at the University of
+                        Cambridge as Research Software Engineer.
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-header">
+                        <div class="news-date">January 2023</div>
+                        <div class="news-line"></div>
+                    </div>
+                    <div class="news-content">
+                        Joined the Centre for the Future of Intelligence at the University of Cambridge as Software
+                        Engineer. Promoted to Lead Software Engineer a year later.
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-header">
+                        <div class="news-date">August 2022</div>
+                        <div class="news-line"></div>
+                    </div>
+                    <div class="news-content">
+                        Joined a startup building water detection hardware as an Intern Software Engineer.
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-header">
+                        <div class="news-date">August 2022</div>
+                        <div class="news-line"></div>
+                    </div>
+                    <div class="news-content with-bullet">
+                        Graduated with a Master's degree in Artificial Intelligence from King's College London (KCL).
+                    </div>
+                    <div class="news-content with-bullet">
+                        Game development project "ItLivesInTheWoods" started as a solo side project, later to be a Steam
+                        commercial release.
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-header">
+                        <div class="news-date">February 2022</div>
+                        <div class="news-line"></div>
+                    </div>
+                    <div class="news-content">
+                        Graduated with a Bachelor's degree in Computer Science from the University of Westminster.
+                    </div>
+                </div>
+            </section>
+            <!-- Weeknotes Section -->
+            <section id="weeknotes" class="section">
+                <h1>Weeknotes</h1>
+                <div id="weeknotes-container"></div>
+            </section>
+
+            <script>
+                async function loadWeeknotes() {
+                    const res = await fetch('weeknotes-rss.xml');
+                    const xml = await res.text();
+                    const doc = new DOMParser().parseFromString(xml, 'application/xml');
+                    const items = Array.from(doc.querySelectorAll('item'));
+                    const container = document.getElementById('weeknotes-container');
+                    container.innerHTML = '';  // clear any placeholder
+
+                    items.forEach(item => {
+                        const link = item.querySelector('link').textContent;
+                        const date = item.querySelector('pubDate').textContent;
+                        const desc = item.querySelector('description').textContent;
+                        const el = document.createElement('div');
+                        el.className = 'news-item';
+                        el.innerHTML = `
+                      <a href="${link}" style="text-decoration:none;color:inherit">
+                        <div class="news-header">
+                          <div class="news-date">${date}</div>
+                          <div class="news-line"></div>
+                        </div>
+                        <div class="news-content">${desc}</div>
+                      </a>
+                    `;
+                        container.appendChild(el);
+                    });
                 }
-            }
-        });
-        </script>
-    </body>
+                document.addEventListener('DOMContentLoaded', loadWeeknotes);
+            </script>
+
+            <script>
+                // Navigation functionality
+                document.addEventListener('DOMContentLoaded', function () {
+                    const navLinks = document.querySelectorAll('.nav-link');
+                    const sections = document.querySelectorAll('.section');
+
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            // Remove active class from all nav links and sections
+                            navLinks.forEach(l => l.classList.remove('active'));
+                            sections.forEach(s => s.classList.remove('active'));
+
+                            // Add active class to clicked link
+                            this.classList.add('active');
+
+                            // Show corresponding section
+                            const targetId = this.getAttribute('href').substring(1);
+                            const targetSection = document.getElementById(targetId);
+                            if (targetSection) {
+                                targetSection.classList.add('active');
+                            }
+                        });
+                    });
+                });
+
+                function toggleFullscreen() {
+                    const container = document.querySelector('.cv-viewer-container');
+                    const btn = document.querySelector('.viewer-btn i');
+
+                    if (container.classList.contains('fullscreen')) {
+                        container.classList.remove('fullscreen');
+                        btn.className = 'fas fa-expand';
+                        btn.parentElement.title = 'Toggle Fullscreen';
+                    } else {
+                        container.classList.add('fullscreen');
+                        btn.className = 'fas fa-compress';
+                        btn.parentElement.title = 'Exit Fullscreen';
+                    }
+                }
+
+                // Close fullscreen with Escape key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') {
+                        const container = document.querySelector('.cv-viewer-container');
+                        if (container.classList.contains('fullscreen')) {
+                            toggleFullscreen();
+                        }
+                    }
+                });
+            </script>
+</body>
+
 </html>
