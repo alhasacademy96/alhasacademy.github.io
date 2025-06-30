@@ -681,11 +681,11 @@
                     <a href="https://github.com/alhasacademy96" target="_blank" class="icon-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://alhasacademy96.github.io/alhasacademy.github.io/rss.xml" target="_blank"
+                    <a href="rss.xml" target="_blank"
                         class="icon-link" title="RSS Feed">
                         <i class="fas fa-rss"></i>
                     </a>
-                    <a href="https://alhasacademy96.github.io/alhasacademy.github.io/weeknotes-rss.xml" target="_blank"
+                    <a href="weeknotes-rss.xml" target="_blank"
                         class="icon-link" title="Weeknotes RSS Feed">
                         <i class="fas fa-calendar-week"></i>
                     </a>
@@ -698,7 +698,7 @@
                         <a href="#home" class="nav-link active">Home</a>
                     </li>
                     <li>
-                        <a href="#publications&projects" class="nav-link">Publications & Projects</a>
+                        <a href="#publications-projects" class="nav-link">Publications & Projects</a>
                     </li>
                     <li>
                         <a href="#cv" class="nav-link">CV</a>
@@ -758,7 +758,7 @@
                 </div>
             </section>
             <!-- Publications & Projects Section -->
-            <section id="publications&projects" class="section">
+            <section id="publications-projects" class="section">
                 <h1>Publications & Projects</h1>
                 <h2>Publications</h2>
                 <div class="publication">
@@ -855,15 +855,6 @@
             <!-- News Section -->
             <section id="news" class="section">
                 <h1>So, what's been happening?</h1>
-                <div class="news-item">
-                    <div class="news-header">
-                        <div class="news-date">June 2025</div>
-                        <div class="news-line"></div>
-                    </div>
-                    <div class="news-content">
-                        Had a meeting with the team at CE to understand their current workflows, pipeline, management, issues, concerns; expected workflows.
-                    </div>
-                </div>
                 <div class="news-item">
                     <div class="news-header">
                         <div class="news-date">June 2025</div>
@@ -1050,20 +1041,23 @@
             <!-- Combined feed loader + nav/scroll -->
             <script>
                 document.addEventListener('DOMContentLoaded', async () => {
-                    // 1) Fetch & render the weeknotes feed
-                    const res = await fetch('weeknotes-rss.xml');
-                    const xml = await res.text();
-                    const doc = new DOMParser().parseFromString(xml, 'application/xml');
-                    const items = Array.from(doc.querySelectorAll('item'));
-                    const container = document.getElementById('weeknotes-container');
-                    container.innerHTML = '';
-                    items.forEach(item => {
-                        const link = item.querySelector('link').textContent;
-                        const date = item.querySelector('pubDate').textContent;
-                        const desc = item.querySelector('description').textContent;
-                        const el = document.createElement('div');
-                        el.className = 'news-item';
-                        el.innerHTML = `
+                    // 1) Fetch & render the weeknotes feed (with error handling)
+                    try {
+                        const res = await fetch('weeknotes-rss.xml');
+                        if (res.ok) {
+                            const xml = await res.text();
+                            const doc = new DOMParser().parseFromString(xml, 'application/xml');
+                            const items = Array.from(doc.querySelectorAll('item'));
+                            const container = document.getElementById('weeknotes-container');
+                            if (container) {
+                                container.innerHTML = '';
+                                items.forEach(item => {
+                                    const link = item.querySelector('link')?.textContent || '#';
+                                    const date = item.querySelector('pubDate')?.textContent || '';
+                                    const desc = item.querySelector('description')?.textContent || '';
+                                    const el = document.createElement('div');
+                                    el.className = 'news-item';
+                                    el.innerHTML = `
         <a href="${link}" style="text-decoration:none;color:inherit">
           <div class="news-header">
             <div class="news-date">${date}</div>
@@ -1072,33 +1066,51 @@
           <div class="news-content">${desc}</div>
         </a>
       `;
-                        container.appendChild(el);
-                    });
+                                    container.appendChild(el);
+                                });
+                            }
+                        }
+                    } catch (error) {
+                        console.log('RSS feed loading failed, but navigation will still work:', error);
+                    }
 
                     // 2) Section/navigation activation + scroll
                     const navLinks = document.querySelectorAll('.nav-link');
                     const sections = document.querySelectorAll('.section');
+                    
                     function activate(id) {
+                        console.log('Activating section:', id);
                         sections.forEach(s => s.classList.remove('active'));
                         navLinks.forEach(l => l.classList.remove('active'));
                         const sec = document.getElementById(id);
                         if (sec) {
                             sec.classList.add('active');
                             sec.scrollIntoView({ behavior: 'smooth' });
+                            console.log('Section activated:', id);
+                        } else {
+                            console.log('Section not found:', id);
                         }
                         const link = document.querySelector(`.nav-link[href="#${id}"]`);
-                        if (link) link.classList.add('active');
+                        if (link) {
+                            link.classList.add('active');
+                            console.log('Link activated:', id);
+                        } else {
+                            console.log('Link not found for:', id);
+                        }
                     }
 
                     navLinks.forEach(link => {
                         link.addEventListener('click', e => {
                             e.preventDefault();
-                            activate(link.getAttribute('href').slice(1));
+                            const targetId = link.getAttribute('href').slice(1);
+                            console.log('Navigation clicked:', targetId);
+                            activate(targetId);
                         });
                     });
 
                     // On load, pick up the hash (or default to 'home')
                     const initial = window.location.hash.slice(1) || 'home';
+                    console.log('Initial section:', initial);
                     activate(initial);
                 });
             </script>

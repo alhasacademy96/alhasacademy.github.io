@@ -60,6 +60,50 @@ app.post('/api/news', (req, res) => {
     }
 });
 
+app.get('/api/news/:id', (req, res) => {
+    try {
+        const newsPath = path.join(__dirname, 'data', 'news.json');
+        if (fs.existsSync(newsPath)) {
+            const news = JSON.parse(fs.readFileSync(newsPath, 'utf8'));
+            const item = news.find(item => item.id === parseInt(req.params.id));
+            if (item) {
+                res.json(item);
+            } else {
+                res.status(404).json({ error: 'News item not found' });
+            }
+        } else {
+            res.status(404).json({ error: 'News item not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to load news item' });
+    }
+});
+
+app.put('/api/news/:id', (req, res) => {
+    try {
+        const newsPath = path.join(__dirname, 'data', 'news.json');
+        if (fs.existsSync(newsPath)) {
+            let news = JSON.parse(fs.readFileSync(newsPath, 'utf8'));
+            const index = news.findIndex(item => item.id === parseInt(req.params.id));
+            if (index !== -1) {
+                news[index] = {
+                    ...news[index],
+                    ...req.body,
+                    id: parseInt(req.params.id)
+                };
+                fs.writeFileSync(newsPath, JSON.stringify(news, null, 2), 'utf8');
+                res.json({ success: true, item: news[index] });
+            } else {
+                res.status(404).json({ error: 'News item not found' });
+            }
+        } else {
+            res.status(404).json({ error: 'News item not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to update news item' });
+    }
+});
+
 app.delete('/api/news/:id', (req, res) => {
     try {
         const newsPath = path.join(__dirname, 'data', 'news.json');
@@ -108,6 +152,50 @@ app.post('/api/weeknotes', (req, res) => {
         res.json({ success: true, item: weeknote });
     } catch (error) {
         res.status(500).json({ error: 'Failed to save weeknote' });
+    }
+});
+
+app.get('/api/weeknotes/:id', (req, res) => {
+    try {
+        const weeknotesPath = path.join(__dirname, 'data', 'weeknotes.json');
+        if (fs.existsSync(weeknotesPath)) {
+            const weeknotes = JSON.parse(fs.readFileSync(weeknotesPath, 'utf8'));
+            const item = weeknotes.find(item => item.id === parseInt(req.params.id));
+            if (item) {
+                res.json(item);
+            } else {
+                res.status(404).json({ error: 'Weeknote not found' });
+            }
+        } else {
+            res.status(404).json({ error: 'Weeknote not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to load weeknote' });
+    }
+});
+
+app.put('/api/weeknotes/:id', (req, res) => {
+    try {
+        const weeknotesPath = path.join(__dirname, 'data', 'weeknotes.json');
+        if (fs.existsSync(weeknotesPath)) {
+            let weeknotes = JSON.parse(fs.readFileSync(weeknotesPath, 'utf8'));
+            const index = weeknotes.findIndex(item => item.id === parseInt(req.params.id));
+            if (index !== -1) {
+                weeknotes[index] = {
+                    ...weeknotes[index],
+                    ...req.body,
+                    id: parseInt(req.params.id)
+                };
+                fs.writeFileSync(weeknotesPath, JSON.stringify(weeknotes, null, 2), 'utf8');
+                res.json({ success: true, item: weeknotes[index] });
+            } else {
+                res.status(404).json({ error: 'Weeknote not found' });
+            }
+        } else {
+            res.status(404).json({ error: 'Weeknote not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to update weeknote' });
     }
 });
 
