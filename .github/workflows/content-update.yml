@@ -13,13 +13,12 @@ on:
 jobs:
   update-content:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: read
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -49,7 +48,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add .
         git commit -m "Auto-update content and RSS feeds - $(date +'%Y-%m-%d %H:%M:%S')"
-        git push origin main
+        git push
         
     - name: No changes found
       if: steps.check_changes.outputs.has_changes == 'false'
