@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Initiated research on the concept of creating a central, modular; efficient CE pipeline",
+    "date": "2025-06-30",
+    "content": "Had a meeting with the team at CE to understand their current workflows, pipeline, management, issues, concerns; expected workflows.",
+    "categories": [
+      "Research",
+      "CE",
+      "System Design"
+    ],
+    "id": 1751320559131
+  },
+  {
+    "title": "Joined University of Cambridge's Department of Zoology",
+    "date": "2025-06-01",
+    "content": "Joined the Department of Zoology and Department of Computer Science teams at the University of Cambridge as Research Software Engineer.",
+    "categories": [
+      "Career",
+      "Research"
+    ],
+    "id": 1751320308661
+  },
+  {
+    "title": "Promoted to Lead Software Engineer at LCFI",
+    "date": "2025-01-01",
+    "content": "Promoted to Lead Software Engineer at the Leverhulme Centre for the Future of Intelligence Institution (LCFI), University of Cambridge.",
+    "categories": [
+      "Career"
+    ],
+    "id": 1751320308662
+  },
+  {
+    "title": "Joined LCFI as Software Engineer",
+    "date": "2024-01-01",
+    "content": "Joined the Centre for the Future of Intelligence at the University of Cambridge as Software Engineer.",
+    "categories": [
+      "Career"
+    ],
+    "id": 1751320308663
+  },
+  {
+    "title": "Joined startup as Intern Software Engineer",
+    "date": "2022-08-01",
+    "content": "Joined a startup building water detection hardware as an Intern Software Engineer.",
+    "categories": [
+      "Career"
+    ],
+    "id": 1751320308664
+  },
+  {
+    "title": "Graduated with MSc in AI from King's College London",
+    "date": "2022-08-01",
+    "content": "Graduated with a Master's degree in Artificial Intelligence from King's College London (KCL).",
+    "categories": [
+      "Education"
+    ],
+    "id": 1751320308665
+  },
+  {
+    "title": "Started Game Development Project 'ItLivesInTheWoods'",
+    "date": "2022-08-01",
+    "content": "Game development project 'ItLivesInTheWoods' started as a solo side project, later to be a Steam commercial release.",
+    "categories": [
+      "Projects",
+      "Games"
+    ],
+    "id": 1751320308666
+  },
+  {
+    "title": "Graduated with BSc in Computer Science",
+    "date": "2018-05-01",
+    "content": "Graduated with a Bachelor's degree in Computer Science from the University of Westminster.",
+    "categories": [
+      "Education"
+    ],
+    "id": 1751320308667
+  }
+]
