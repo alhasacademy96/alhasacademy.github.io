@@ -907,21 +907,23 @@
                     </div>
                 </div>
             </section>
+
             <!-- Weeknotes Section -->
             <section id="weeknotes" class="section">
                 <h1>Weeknotes</h1>
                 <div id="weeknotes-container"></div>
             </section>
 
+            <!-- Combined feed loader + nav/scroll -->
             <script>
-                async function loadWeeknotes() {
+                document.addEventListener('DOMContentLoaded', async () => {
+                    // 1) Fetch & render the weeknotes feed
                     const res = await fetch('weeknotes-rss.xml');
                     const xml = await res.text();
                     const doc = new DOMParser().parseFromString(xml, 'application/xml');
                     const items = Array.from(doc.querySelectorAll('item'));
                     const container = document.getElementById('weeknotes-container');
-                    container.innerHTML = '';  // clear any placeholder
-
+                    container.innerHTML = '';
                     items.forEach(item => {
                         const link = item.querySelector('link').textContent;
                         const date = item.querySelector('pubDate').textContent;
@@ -929,51 +931,50 @@
                         const el = document.createElement('div');
                         el.className = 'news-item';
                         el.innerHTML = `
-                      <a href="${link}" style="text-decoration:none;color:inherit">
-                        <div class="news-header">
-                          <div class="news-date">${date}</div>
-                          <div class="news-line"></div>
-                        </div>
-                        <div class="news-content">${desc}</div>
-                      </a>
-                    `;
+        <a href="${link}" style="text-decoration:none;color:inherit">
+          <div class="news-header">
+            <div class="news-date">${date}</div>
+            <div class="news-line"></div>
+          </div>
+          <div class="news-content">${desc}</div>
+        </a>
+      `;
                         container.appendChild(el);
                     });
-                }
-                document.addEventListener('DOMContentLoaded', loadWeeknotes);
-            </script>
 
-            <script>
-                // Navigation functionality
-                document.addEventListener('DOMContentLoaded', function () {
+                    // 2) Section/navigation activation + scroll
                     const navLinks = document.querySelectorAll('.nav-link');
                     const sections = document.querySelectorAll('.section');
+                    function activate(id) {
+                        sections.forEach(s => s.classList.remove('active'));
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        const sec = document.getElementById(id);
+                        if (sec) {
+                            sec.classList.add('active');
+                            sec.scrollIntoView({ behavior: 'smooth' });
+                        }
+                        const link = document.querySelector(`.nav-link[href="#${id}"]`);
+                        if (link) link.classList.add('active');
+                    }
 
                     navLinks.forEach(link => {
-                        link.addEventListener('click', function (e) {
+                        link.addEventListener('click', e => {
                             e.preventDefault();
-
-                            // Remove active class from all nav links and sections
-                            navLinks.forEach(l => l.classList.remove('active'));
-                            sections.forEach(s => s.classList.remove('active'));
-
-                            // Add active class to clicked link
-                            this.classList.add('active');
-
-                            // Show corresponding section
-                            const targetId = this.getAttribute('href').substring(1);
-                            const targetSection = document.getElementById(targetId);
-                            if (targetSection) {
-                                targetSection.classList.add('active');
-                            }
+                            activate(link.getAttribute('href').slice(1));
                         });
                     });
-                });
 
+                    // On load, pick up the hash (or default to 'home')
+                    const initial = window.location.hash.slice(1) || 'home';
+                    activate(initial);
+                });
+            </script>
+
+            <!-- Fullscreen toggle (unchanged) -->
+            <script>
                 function toggleFullscreen() {
                     const container = document.querySelector('.cv-viewer-container');
                     const btn = document.querySelector('.viewer-btn i');
-
                     if (container.classList.contains('fullscreen')) {
                         container.classList.remove('fullscreen');
                         btn.className = 'fas fa-expand';
@@ -984,7 +985,6 @@
                         btn.parentElement.title = 'Exit Fullscreen';
                     }
                 }
-
                 // Close fullscreen with Escape key
                 document.addEventListener('keydown', function (e) {
                     if (e.key === 'Escape') {
