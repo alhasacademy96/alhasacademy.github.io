@@ -418,7 +418,16 @@
             }
         }
 
-        // Form handling is now handled in the update functions below
+        // Form handling
+        document.getElementById('news-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            addNewsItem();
+        });
+
+        document.getElementById('weeknotes-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            addWeeknote();
+        });
 
         // News functions
         async function addNewsItem() {
@@ -667,156 +676,9 @@
             }
         }
 
-        // Edit functions
-        async function editNewsItem(id) {
-            try {
-                const response = await fetch(`/api/news/${id}`);
-                const item = await response.json();
-                
-                document.getElementById('news-title').value = item.title;
-                document.getElementById('news-date').value = item.date;
-                document.getElementById('news-content').value = item.content;
-                document.getElementById('news-categories').value = item.categories.join(', ');
-                
-                // Change form to update mode
-                const form = document.getElementById('news-form');
-                form.dataset.editId = id;
-                form.querySelector('button[type="submit"]').textContent = 'Update News Item';
-                
-                // Scroll to form
-                document.getElementById('news-panel').scrollIntoView({ behavior: 'smooth' });
-            } catch (error) {
-                showStatus('news', 'Error loading news item for editing', 'error');
-            }
-        }
-
-        async function editWeeknote(id) {
-            try {
-                const response = await fetch(`/api/weeknotes/${id}`);
-                const item = await response.json();
-                
-                document.getElementById('weeknotes-title').value = item.title;
-                document.getElementById('weeknotes-date').value = item.date;
-                document.getElementById('weeknotes-content').value = item.content;
-                document.getElementById('weeknotes-categories').value = item.categories.join(', ');
-                
-                // Change form to update mode
-                const form = document.getElementById('weeknotes-form');
-                form.dataset.editId = id;
-                form.querySelector('button[type="submit"]').textContent = 'Update Weeknote';
-                
-                // Scroll to form
-                document.getElementById('weeknotes-panel').scrollIntoView({ behavior: 'smooth' });
-            } catch (error) {
-                showStatus('weeknotes', 'Error loading weeknote for editing', 'error');
-            }
-        }
-
-        // Update form submission handlers
-        document.getElementById('news-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const editId = this.dataset.editId;
-            if (editId) {
-                updateNewsItem(editId);
-            } else {
-                addNewsItem();
-            }
-        });
-
-        document.getElementById('weeknotes-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const editId = this.dataset.editId;
-            if (editId) {
-                updateWeeknote(editId);
-            } else {
-                addWeeknote();
-            }
-        });
-
-        async function updateNewsItem(id) {
-            const title = document.getElementById('news-title').value;
-            const date = document.getElementById('news-date').value;
-            const content = document.getElementById('news-content').value;
-            const categories = document.getElementById('news-categories').value;
-
-            const newsItem = {
-                title: title,
-                date: date,
-                content: content,
-                categories: categories.split(',').map(cat => cat.trim()).filter(cat => cat)
-            };
-
-            try {
-                const response = await fetch(`/api/news/${id}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(newsItem)
-                });
-
-                if (response.ok) {
-                    showStatus('news', 'News item updated successfully!', 'success');
-                    clearNewsForm();
-                    loadNewsItems();
-                } else {
-                    showStatus('news', 'Failed to update news item', 'error');
-                }
-            } catch (error) {
-                showStatus('news', 'Error updating news item', 'error');
-            }
-        }
-
-        async function updateWeeknote(id) {
-            const title = document.getElementById('weeknotes-title').value;
-            const date = document.getElementById('weeknotes-date').value;
-            const content = document.getElementById('weeknotes-content').value;
-            const categories = document.getElementById('weeknotes-categories').value;
-
-            const weeknote = {
-                title: title,
-                date: date,
-                content: content,
-                categories: categories.split(',').map(cat => cat.trim()).filter(cat => cat)
-            };
-
-            try {
-                const response = await fetch(`/api/weeknotes/${id}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(weeknote)
-                });
-
-                if (response.ok) {
-                    showStatus('weeknotes', 'Weeknote updated successfully!', 'success');
-                    clearWeeknotesForm();
-                    loadWeeknotesItems();
-                } else {
-                    showStatus('weeknotes', 'Failed to update weeknote', 'error');
-                }
-            } catch (error) {
-                showStatus('weeknotes', 'Error updating weeknote', 'error');
-            }
-        }
-
-        function clearNewsForm() {
-            document.getElementById('news-form').reset();
-            document.getElementById('news-form').dataset.editId = '';
-            document.getElementById('news-form').querySelector('button[type="submit"]').textContent = 'Add News Item';
-        }
-
-        function clearWeeknotesForm() {
-            document.getElementById('weeknotes-form').reset();
-            document.getElementById('weeknotes-form').dataset.editId = '';
-            document.getElementById('weeknotes-form').querySelector('button[type="submit"]').textContent = 'Add Weeknote';
-        }
-
         // Load initial content
         document.addEventListener('DOMContentLoaded', function() {
             loadNewsItems();
-            loadWeeknotesItems();
         });
     </script>
 </body>

@@ -1,5 +1,16 @@
 [
   {
+    "title": "Initiated research on the concept of creating a central, modular; efficient CE pipeline",
+    "date": "2025-06-30",
+    "content": "Had a meeting with the team at CE to understand their current workflows, pipeline, management, issues, concerns; expected workflows.",
+    "categories": [
+      "Research",
+      "CE",
+      "System Design"
+    ],
+    "id": 1751320559131
+  },
+  {
     "title": "Joined University of Cambridge's Department of Zoology",
     "date": "2025-06-01",
     "content": "Joined the Department of Zoology and Department of Computer Science teams at the University of Cambridge as Research Software Engineer.",
