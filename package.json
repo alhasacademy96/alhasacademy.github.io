@@ -8,10 +8,7 @@
     "dev": "nodemon server.js",
     "generate": "node generate-content.js",
     "build": "node generate-content.js",
-    "update": "node update-website.js",
-    "rss": "node quick-update.js",
-    "matrix": "node matrix-rss-update.js",
-    "deploy": "node deploy-content.js"
+    "update": "node update-website.js"
   },
   "keywords": [
     "personal-website",
