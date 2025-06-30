@@ -4,9 +4,9 @@
 
 Your website now has **automatic content updates** using GitHub Actions! Here's how it works:
 
-## 📅 Scheduled Updates (Every Thursday)
+## 📅 Scheduled Updates (Daily)
 
-The GitHub Actions workflow runs **every Thursday at 9:00 AM UTC** and:
+The GitHub Actions workflow runs **every day at midnight UTC** and:
 
 1. ✅ **Checks for new content** in your data files
 2. ✅ **Updates RSS feeds** for Matrix bots
@@ -33,22 +33,22 @@ You can also trigger updates manually:
 Two workflows are set up:
 
 ### 1. `content-update.yml`
-- **Triggers**: Every Thursday + when content files change
+- **Triggers**: Every day at midnight + when content files change
 - **Updates**: Website content + RSS feeds
 - **Best for**: Complete content updates
 
 ### 2. `auto-update-rss.yml`
-- **Triggers**: Every Thursday + manual
+- **Triggers**: Every day at midnight + manual
 - **Updates**: RSS feeds only
 - **Best for**: Matrix bot updates
 
 ## 🔧 How to Use
 
-### For Weekly Updates:
+### For Daily Updates:
 1. **Add content** via admin panel: `admin-static.html`
 2. **Export data** and save to `data/` folder
 3. **Commit and push** the data files
-4. **GitHub Actions** automatically updates everything
+4. **GitHub Actions** automatically updates everything daily at midnight
 
 ### For Immediate Updates:
 1. **Add content** via admin panel
@@ -62,11 +62,12 @@ Two workflows are set up:
 Edit `.github/workflows/content-update.yml`:
 ```yaml
 schedule:
-  # Run every Thursday at 9:00 AM UTC
-  - cron: '0 9 * * 4'
+  # Run every day at midnight UTC
+  - cron: '0 0 * * *'
   
   # Other options:
   # Daily at 9 AM: '0 9 * * *'
+  # Every Thursday: '0 9 * * 4'
   # Every Monday: '0 9 * * 1'
   # Every hour: '0 * * * *'
 ```
@@ -92,7 +93,7 @@ The cron schedule uses UTC. To convert to your timezone:
 ## 🎯 Benefits
 
 ✅ **Fully Automated**: No manual commands needed
-✅ **Scheduled**: Runs every Thursday automatically
+✅ **Scheduled**: Runs every day at midnight automatically
 ✅ **Matrix Compatible**: RSS feeds update for bots
 ✅ **Error Handling**: Won't break if no new content
 ✅ **Manual Override**: Can trigger anytime
@@ -117,6 +118,6 @@ The cron schedule uses UTC. To convert to your timezone:
 - **Test manually first**: Use "Run workflow" button to test
 - **Monitor logs**: Check Actions tab for any issues
 - **Backup data**: Keep copies of your content files
-- **Schedule wisely**: Thursday morning works well for weekly updates
+- **Schedule wisely**: Daily midnight updates ensure fresh content
 
 Your website is now **fully automated**! 🎉 
