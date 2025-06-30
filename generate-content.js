@@ -28,7 +28,7 @@ function generateRSSFeed(items, feedType) {
     const lastBuildDate = now.toUTCString();
     
     let rssContent = `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="${config.siteUrl}/rss-style.xsl"?>
+<?xml-stylesheet type="text/xsl" href="rss-style.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ibrahim Alhas - ${feedType === 'news' ? 'News &amp; Updates' : 'Weeknotes'}</title>
