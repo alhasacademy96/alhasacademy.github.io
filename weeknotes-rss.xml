@@ -4,12 +4,62 @@
     <channel>
         <title>Ibrahim Alhas - Weeknotes</title>
         <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
-        <description>Weekly reflections, updates, and thoughts from Ibrahim Alhas on research, projects, and life</description>
+        <description>Weekly reflections, updates, and thoughts from Ibrahim Alhas on research,
+            projects, and life</description>
         <language>en-us</language>
-        <lastBuildDate>Sat, 07 Jun 2025 12:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 30 Jun 2025 12:00:00 +0000</lastBuildDate>
         <copyright>Copyright © 2025 Ibrahim Alhas</copyright>
-        <atom:link href="https://alhasacademy96.github.io/alhasacademy.github.io/weeknotes-rss.xml" rel="self"
+        <atom:link href="https://alhasacademy96.github.io/alhasacademy.github.io/weeknotes-rss.xml"
+            rel="self"
             type="application/rss+xml" />
+
+        <!-- Week 24, 2025: State of the DOI Pipeline -->
+        <item>
+            <title>Week 24, 2025: State of the DOI Pipeline</title>
+            <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
+            <description>
+          <![CDATA[
+          <p><strong>State of the DOI Pipeline</strong></p>
+          <p>This week I compiled the current status of our DOI pipeline, examining both fetching and TEI-conversion stages.</p>
+  
+          <p><strong>Overall Database Numbers:</strong></p>
+          <ul>
+            <li>PDF: 2.8 M raw → ~2.6 M TEI (91.96 %)</li>
+            <li>XML: 5.7 M raw → ~84 K TEI (1.46 %)</li>
+            <li>JSON: 1.4 M raw (∼2 M fetch logs)</li>
+          </ul>
+  
+          <p><strong>DOI-to-Database:</strong> The “big four” publishers (Elsevier, Wiley, Taylor & Francis, Springer) account for ~90 % of fetches. About half fail—mostly 4xx errors (~700 K), access denials (~350 K), payload mismatches (HTML/JS wrappers), and unhandled redirects (~120 K).</p>
+          <p><strong>Actionable Fixes:</strong></p>
+          <ul>
+            <li>Verify and refresh API access with the Library/publishers.</li>
+            <li>Improve <code>curl</code> to target PDF files, follow redirects, and enrich logs.</li>
+            <li>Build a live dashboard for real-time fetch monitoring.</li>
+            <li>Ensure compliance with publishers’ robots.txt and scraping policies.</li>
+          </ul>
+  
+          <p><strong>DOI-to-TEI:</strong> PDF→TEI conversion is near-perfect, but XML→TEI lags (~84 K converted), especially for Elsevier’s layered wrappers. PR #18 helps unwrap one layer, but we need comprehensive XSL tweaks.</p>
+          <p><strong>Actionable Fixes:</strong></p>
+          <ul>
+            <li>Enhance <code>Elsevier.xsl</code> to handle multi-layer wrappers; validate all publisher stylesheets.</li>
+            <li>Purge malformed/truncated XML from the DB and future fetches.</li>
+            <li>Separate HTML from XML before conversion to avoid mix-ups.</li>
+            <li>Merge/rebase PR #18 and test across JATS and SVAPI feeds.</li>
+          </ul>
+  
+          <p>By confirming access and refining our conversion logic, we aim to hit ≥ 90 % fetch success and near-complete XML-to-TEI conversion—fulfilling the pipeline’s core objective.</p>
+          ]]>
+        </description>
+            <pubDate>Mon, 30 Jun 2025 12:00:00 +0000</pubDate>
+            <guid isPermaLink="false">
+                https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes-2025-w24</guid>
+            <author>alhasacademy@gmail.com (Ibrahim Alhas)</author>
+            <category>Weeknotes</category>
+            <category>Projects</category>
+            <category>Research</category>
+        </item>
+
+
         <item>
             <title>Week 23, 2025: Research Software Engineering at Cambridge Zoology</title>
             <link>https://alhasacademy96.github.io/alhasacademy.github.io/#weeknotes</link>
